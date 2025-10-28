@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+ name: foodiehub
+ labels:
+  name: foodiehub
+  app: foodiehub-restaurant
