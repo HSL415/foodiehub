@@ -17,49 +17,34 @@ spec:
     spec:
       containers:
       - name: foodiehub-backend
-        image: foodiehub/backend:latest
-        imagePullPolicy: Always
+        image: foodiehub-backend:v1
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
         env:
         - name: SPRING_PROFILES_ACTIVE
-          valueFrom:
-            configMapKeyRef:
-              name: foodiehub-config
-              key: SPRING_PROFILES_ACTIVE
+          value: "docker"
         - name: DB_HOST
-          valueFrom:
-            configMapKeyRef:
-              name: foodiehub-config
-              key: DB_HOST
+          value: "postgres-service"
         - name: DB_NAME
-          valueFrom:
-            configMapKeyRef:
-              name: foodiehub-config
-              key: DB_NAME
+          value: "foodiehub"
         - name: DB_USER
-          valueFrom:
-            configMapKeyRef:
-              name: foodiehub-config
-              key: DB_USER
+          value: "postgres"
         - name: DB_PASSWORD
           value: "postgres"
         resources:
-          requests:
-            memory: "512Mi"
-            cpu: "250m"
           limits:
-            memory: "1Gi"
+            memory: "512Mi"
             cpu: "500m"
+        readinessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 10
         livenessProbe:
           httpGet:
             path: /actuator/health
             port: 8080
           initialDelaySeconds: 60
-          periodSeconds: 10
-        readinessProbe:
-          httpGet:
-            path: /actuator/health
-            port: 8080
-          initialDelaySeconds: 30
-          periodSeconds: 5
+          periodSeconds: 30

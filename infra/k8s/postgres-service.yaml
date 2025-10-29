@@ -1,13 +1,12 @@
- apiVersion: v1
- kind: Service
- metadata:
+apiVersion: v1
+kind: Service
+metadata:
   name: postgres-service
   namespace: foodiehub
- spec:
+spec:
   type: ClusterIP
   selector:
     app: postgres
   ports:
-  - port: 5432
-    targetPort: 5432
-    protocol: TCP
+    - port: 5432
+      targetPort: 5432
