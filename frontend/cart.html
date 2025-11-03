@@ -20,21 +20,47 @@
     </div>
     <!-- Decorative area for visuals -->
     <div class="cart-fun">
-      <img src="banner.jpg" alt="Cart banner" style="width:140px;border-radius:10px;margin-top:25px;">
+      <img src="images/banner.jpg" alt="Cart banner" style="width:140px;border-radius:10px;margin-top:25px;">
       <div class="cart-mood">Enjoy your feast! 🍽️</div>
     </div>
   </div>
   <script>
     // Example: A lookup for item names to images
-    const imageMap = {
-      "Masala Dosa": "veg1.jpg",
-      "Egg Curry": "nonveg1.jpg",
-      "Chicken Curry": "nonveg1.jpg",
-      "Butter Chicken": "veg5.jpg",
-      "Grilled Fish": "veg6.jpg",
-      "Prawn Masala": "veg7.jpg",
-      // Add all items from your menu as needed
-    };
+     const imageMap = {
+  // Veg Dishes
+  "Paneer Tikka": "images/veg1.jpg",
+  "Masala Dosa": "images/veg4.jpg",
+  "Chole Bhature": "images/veg5.jpg",
+  "Veg Biryani": "images/veg6.jpg",
+  "Palak Paneer": "images/veg7.jpg",
+  "Dal Tadka": "images/veg8.jpg",
+  "Stuffed Paratha": "images/veg9.jpg",
+  "Plain Rice": "images/plainrice.jpg",
+
+  // Non-Veg Dishes
+  "Chicken Curry": "images/nonveg1.jpg",
+  "Grilled Fish": "images/nonveg2.jpg",
+  "Chicken Biryani": "images/nonveg3.jpg",
+  "Mutton Rogan Josh": "images/nonveg4.jpg",
+  "Egg Curry": "images/nonveg5.jpg",
+  "Butter Chicken": "images/nonveg6.jpg",
+  "Fish Fry": "images/nonveg7.jpg",
+  "Chicken Tikka": "images/nonveg8.jpg",
+  "Prawn Masala": "images/nonveg9.jpg",
+  "Chicken Lollipop": "images/nonveg10.jpg",
+
+  // Fruits & Juices
+  "Fruit Salad": "images/fruit1.jpg",
+  "Mango Juice": "images/fruit2.jpg",
+  "Watermelon Juice": "images/fruit3.jpg",
+  "Pineapple Juice": "images/fruit4.jpg",
+  "Apple Shake": "images/fruit5.jpg",
+  "Banana Smoothie": "images/fruit6.jpg",
+  "Orange Juice": "images/fruit7.jpg",
+  "Strawberry Shake": "images/fruit8.jpg",
+  "Papaya Bowl": "images/fruit9.jpg",
+  "Grape Juice": "images/fruit10.jpg"
+};
 
     function loadCart() {
       const cart = JSON.parse(localStorage.getItem("cart")) || [];

@@ -1,0 +1,24 @@
+{
+  "name": "foodiehub",
+  "version": "1.0.0",
+  "description": "FoodieHub is a full-stack restaurant ordering system with automated CI/CD pipeline.\r  ### Team Members\r  - **Member 1**: Frontend Development (HTML, CSS, JavaScript)- **Member 2**: Backend Development (Spring Boot, REST APIs)- **Member 3**: Git &amp; Maven Configuration- **Member 4**: Jenkins CI/CD Pipeline- **Member 5**: Docker &amp; Kubernetes Deployment\r  ## Technology Stack- **Frontend**: HTML5, CSS3, JavaScript- **Backend**: Java 17, Spring Boot 3.2.0- **Database**: PostgreSQL (Production), H2 (Development)- **Build Tool**: Maven- **Version Control**: Git- **CI/CD**: Jenkins- **Containerization**: Docker- **Orchestration**: Kubernetes\r  ## Quick Start\r  ### Prerequisites- Java JDK 17+- Maven 3.8+- Docker Desktop- Git\r  ### Local Development\r  1. Clone the repository:\r  ```bash\r  git clone &lt;repository-url&gt;\r  cd foodiehub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HSL415/foodiehub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/HSL415/foodiehub/issues"
+  },
+  "homepage": "https://github.com/HSL415/foodiehub#readme",
+  "devDependencies": {
+    "electron": "^39.0.0"
+  }
+}
