@@ -1,34 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - FoodieHub</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu - FoodieHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>🍽️ FoodieHub</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="order.html">My Orders</a>
-            </nav>
-        </div>
-    </header>
+  <div class="container">
+    <h2>Explore Our Menu</h2>
 
-    <main class="container">
-        <h2>Our Menu</h2>
-        <div id="menu-items" class="menu-grid">
-            <div class="loading">Loading menu...</div>
-        </div>
-    </main>
+    <!-- 🥦 Veg Dishes -->
+    <section class="menu-category">
+      <h3>🥦 Veg Dishes</h3>
+      <div class="menu-items">
+        <div class="item"><img src="veg1.jpg" alt="Paneer Tikka"/><h4>Paneer Tikka</h4><p>₹200</p><button onclick="addToCart('Paneer Tikka', 200)">Add to Cart</button></div>
+        <div class="item"><img src="veg4.jpg" alt="Masala Dosa"/><h4>Masala Dosa</h4><p>₹180</p><button onclick="addToCart('Masala Dosa', 180)">Add to Cart</button></div>
+        <div class="item"><img src="veg5.jfif" alt="Chole Bhature"/><h4>Chole Bhature</h4><p>₹160</p><button onclick="addToCart('Chole Bhature', 160)">Add to Cart</button></div>
+        <div class="item"><img src="veg6.jpg" alt="Veg Biryani"/><h4>Veg Biryani</h4><p>₹220</p><button onclick="addToCart('Veg Biryani', 220)">Add to Cart</button></div>
+        <div class="item"><img src="veg7.jfif" alt="Palak Paneer"/><h4>Palak Paneer</h4><p>₹210</p><button onclick="addToCart('Palak Paneer', 210)">Add to Cart</button></div>
+        <div class="item"><img src="veg8.webp" alt="Dal Tadka"/><h4>Dal Tadka</h4><p>₹140</p><button onclick="addToCart('Dal Tadka', 140)">Add to Cart</button></div>
+        <div class="item"><img src="veg9.jfif" alt="Stuffed Paratha"/><h4>Stuffed Paratha</h4><p>₹130</p><button onclick="addToCart('Stuffed Paratha', 130)">Add to Cart</button></div>
+        <div class="item"><img src="plainrice.jpg" alt="Plain Rice"/><h4>Plain Rice</h4><p>₹100</p><button onclick="addToCart('Plain Rice', 100)">Add to Cart</button></div>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 FoodieHub. All rights reserved.</p>
-    </footer>
+    <!-- 🍗 Non-Veg Dishes -->
+    <section class="menu-category">
+      <h3>🍗 Non-Veg Dishes</h3>
+      <div class="menu-items">
+        <div class="item"><img src="images/nonveg1.jpg" alt="Chicken Curry"/><h4>Chicken Curry</h4><p>₹300</p><button onclick="addToCart('Chicken Curry', 300)">Add to Cart</button></div>
+        <div class="item"><img src="images/nonveg2.jpg" alt="Grilled Fish"/><h4>Grilled Fish</h4><p>₹350</p><button onclick="addToCart('Grilled Fish', 350)">Add to Cart</button></div>
+        <div class="item"><img src="images/nonveg3.jpg" alt="Chicken Biryani"/><h4>Chicken Biryani</h4><p>₹280</p><button onclick="addToCart('Chicken Biryani', 280)">Add to Cart</button></div>
+        <div class="item"><img src="images/nonveg4.jpg" alt="Mutton Rogan Josh"/><h4>Mutton Rogan Josh</h4><p>₹400</p><button onclick="addToCart('Mutton Rogan Josh', 400)">Add to Cart</button></div>
+        <div class="item"><img src="images/nonveg5.jpg" alt="Egg Curry"/><h4>Egg Curry</h4><p>₹180</p><button onclick="addToCart('Egg Curry', 180)">Add to Cart</button></div>
+        <div class="item"><img src="images/nonveg6.jpg" alt="Butter Chicken"/><h4>Butter Chicken</h4><p>₹320</p><button onclick="addToCart('Butter Chicken', 320)">Add to Cart</button></div>
+        <div class="item"><img src="images/nonveg7.jpg" alt="Fish Fry"/><h4>Fish Fry</h4><p>₹260</p><button onclick="addToCart('Fish Fry', 260)">Add to Cart</button></div>
+        <div class="item"><img src="images/nonveg8.jpg" alt="Chicken Tikka"/><h4>Chicken Tikka</h4><p>₹240</p><button onclick="addToCart('Chicken Tikka', 240)">Add to Cart</button></div>
+        <div class="item"><img src="images/nonveg9.jpg" alt="Prawn Masala"/><h4>Prawn Masala</h4><p>₹370</p><button onclick="addToCart('Prawn Masala', 370)">Add to Cart</button></div>
+        <div class="item"><img src="images/nonveg10.jpg" alt="Chicken Lollipop"/><h4>Chicken Lollipop</h4><p>₹210</p><button onclick="addToCart('Chicken Lollipop', 210)">Add to Cart</button></div>
+      </div>
+    </section>
 
-    <script src="app.js"></script>
+    <!-- 🍓 Fruits & Juices -->
+    <section class="menu-category">
+      <h3>🍓 Fruits & Juices</h3>
+      <div class="menu-items">
+        <div class="item"><img src="images/fruit1.jpg" alt="Fruit Salad"/><h4>Fruit Salad</h4><p>₹120</p><button onclick="addToCart('Fruit Salad', 120)">Add to Cart</button></div>
+        <div class="item"><img src="images/fruit2.jpg" alt="Mango Juice"/><h4>Mango Juice</h4><p>₹80</p><button onclick="addToCart('Mango Juice', 80)">Add to Cart</button></div>
+        <div class="item"><img src="images/fruit3.jpg" alt="Watermelon Juice"/><h4>Watermelon Juice</h4><p>₹70</p><button onclick="addToCart('Watermelon Juice', 70)">Add to Cart</button></div>
+        <div class="item"><img src="images/fruit4.jpg" alt="Pineapple Juice"/><h4>Pineapple Juice</h4><p>₹90</p><button onclick="addToCart('Pineapple Juice', 90)">Add to Cart</button></div>
+        <div class="item"><img src="images/fruit5.jpg" alt="Apple Shake"/><h4>Apple Shake</h4><p>₹100</p><button onclick="addToCart('Apple Shake', 100)">Add to Cart</button></div>
+        <div class="item"><img src="images/fruit6.jpg" alt="Banana Smoothie"/><h4>Banana Smoothie</h4><p>₹110</p><button onclick="addToCart('Banana Smoothie', 110)">Add to Cart</button></div>
+        <div class="item"><img src="images/fruit7.jpg" alt="Orange Juice"/><h4>Orange Juice</h4><p>₹85</p><button onclick="addToCart('Orange Juice', 85)">Add to Cart</button></div>
+        <div class="item"><img src="images/fruit8.jpg" alt="Strawberry Shake"/><h4>Strawberry Shake</h4><p>₹130</p><button onclick="addToCart('Strawberry Shake', 130)">Add to Cart</button></div>
+        <div class="item"><img src="images/fruit9.jpg" alt="Papaya Bowl"/><h4>Papaya Bowl</h4><p>₹90</p><button onclick="addToCart('Papaya Bowl', 90)">Add to Cart</button></div>
+        <div class="item"><img src="images/fruit10.jpg" alt="Grape Juice"/><h4>Grape Juice</h4><p>₹95</p><button onclick="addToCart('Grape Juice', 95)">Add to Cart</button></div>
+      </div>
+    </section>
+
+    <!-- 🔙 Go Back Button -->
+    <a href="index.html" class="back-button">← Go Back to Home</a>
+  </div>
+
+  <!-- 🧠 Cart Script -->
+  <script>
+    function addToCart(item, price) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push({ item, price });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${item} added to cart!`);
+    }
+  </script>
 </body>
 </html>
