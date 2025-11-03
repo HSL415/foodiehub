@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foodiehub-frontend
+  namespace: foodiehub
+  labels:
+    app: foodiehub-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: foodiehub-frontend
+  template:
+    metadata:
+      labels:
+        app: foodiehub-frontend
+    spec:
+      containers:
+      - name: nginx
+        image: hsl415/foodiehub-frontend:v1
+        ports:
+        - containerPort: 80

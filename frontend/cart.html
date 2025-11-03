@@ -9,20 +9,33 @@
 </head>
 <body>
   <div class="container cart-container">
-    <h2>Your Cart</h2>
+    <h2>Your Cart <span>🛒</span></h2>
     <div id="cart-items"></div>
-
     <div class="cart-summary">
       <p><strong>Total Price:</strong> ₹<span id="total-price">0</span></p>
     </div>
-
     <div class="cart-actions">
-      <button class="clear-button" onclick="clearCart()">Clear Cart</button>
+      <button class="clear-button" onclick="clearCart()">🧹 Clear Cart</button>
       <a href="index.html" class="back-button">← Back to Home</a>
     </div>
+    <!-- Decorative area for visuals -->
+    <div class="cart-fun">
+      <img src="banner.jpg" alt="Cart banner" style="width:140px;border-radius:10px;margin-top:25px;">
+      <div class="cart-mood">Enjoy your feast! 🍽️</div>
+    </div>
   </div>
-
   <script>
+    // Example: A lookup for item names to images
+    const imageMap = {
+      "Masala Dosa": "veg1.jpg",
+      "Egg Curry": "nonveg1.jpg",
+      "Chicken Curry": "nonveg1.jpg",
+      "Butter Chicken": "veg5.jpg",
+      "Grilled Fish": "veg6.jpg",
+      "Prawn Masala": "veg7.jpg",
+      // Add all items from your menu as needed
+    };
+
     function loadCart() {
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
       const cartContainer = document.getElementById("cart-items");
@@ -34,35 +47,32 @@
       } else {
         cartContainer.innerHTML = "";
         let total = 0;
-
         cart.forEach((item, index) => {
           total += item.price;
+          const imgFile = imageMap[item.item] ? imageMap[item.item] : "logo.png";
           const div = document.createElement("div");
           div.className = "cart-item";
           div.innerHTML = `
+            <img src="${imgFile}" alt="${item.item}" class="cart-thumb"/>
             <strong>${item.item}</strong> - ₹${item.price}
             <button class="remove-button" onclick="removeItem(${index})">Remove</button>
           `;
           cartContainer.appendChild(div);
         });
-
         totalPriceElement.textContent = total;
       }
     }
-
     function removeItem(index) {
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       cart.splice(index, 1);
       localStorage.setItem("cart", JSON.stringify(cart));
       loadCart();
     }
-
     function clearCart() {
       localStorage.removeItem("cart");
       loadCart();
       alert("Cart has been cleared.");
     }
-
     window.onload = loadCart;
   </script>
 </body>
